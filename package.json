@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "update": "sequelize db:drop && sequelize db:create --charset utf8mb4 && sequelize db:migrate --debug && sequelize db:seed:all --debug",
     "start": "nodemon  ./bin/www --exec babel-node --presets babel-preset-env"
   },
   "dependencies": {
@@ -17,7 +18,8 @@
     "morgan": "~1.9.1",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.12",
-    "sequelize-cli": "^5.5.0"
+    "sequelize-cli": "^5.5.0",
+    "yarn": "^1.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

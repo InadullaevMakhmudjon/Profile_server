@@ -1,13 +1,15 @@
 require('dotenv').config();
 
-export default {
+module.exports = {
   development: {
     username: 'root',
     password: null,
     database: 'database_development',
     host: '127.0.0.1',
     dialect: 'mysql',
-    operatorsAliases: false,
+    define: {
+      timestampss: false,
+    },
   },
   test: {
     username: 'root',
@@ -15,7 +17,9 @@ export default {
     database: 'database_test',
     host: '127.0.0.1',
     dialect: 'mysql',
-    operatorsAliases: false,
+    define: {
+      timestampss: false,
+    },
   },
   production: {
     username: process.env.DB_USERNAME,
@@ -23,6 +27,8 @@ export default {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     dialect: 'mysql',
-    operatorsAliases: false,
+    define: {
+      timestampss: false,
+    },
   },
 };
