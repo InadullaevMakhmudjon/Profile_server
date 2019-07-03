@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { _basename, join } from 'path';
+import { basename as _basename, join } from 'path';
 import Sequelize from 'sequelize';
 
 const basename = _basename(__filename);

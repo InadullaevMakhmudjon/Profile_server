@@ -1,10 +1,5 @@
-import { Router } from 'express';
+import auth from './auth';
 
-const router = Router();
-
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', { title: 'Express' });
-});
-
-export default router;
+export default (app) => {
+  app.use('/api/auth', auth);
+};
